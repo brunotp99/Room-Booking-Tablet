@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/appTablet/app/src/main/res/drawable/ic_bottom_wave.xml" value="0.36" />
+        <entry key="..\:/appTablet/app/src/main/res/drawable/modern_button.xml" value="0.196" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_add_event.xml" value="0.16336633663366337" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_add_events_half.xml" value="0.25" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_calendar_compose.xml" value="0.16336633663366337" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_desativado.xml" value="0.22" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_main.xml" value="0.14343928280358598" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_ocupado.xml" value="0.22" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_redir_activities.xml" value="0.16336633663366337" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_registro_dispositivo.xml" value="0.18" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/activity_settings.xml" value="0.15" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/cal_fragment.xml" value="0.16336633663366337" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/criar_reserva.xml" value="0.18802083333333333" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/dialog_info.xml" value="0.16336633663366337" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/dialog_nome.xml" value="0.18" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/dialog_pinview.xml" value="0.16336633663366337" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/dropdown_item.xml" value="0.1" />
+        <entry key="..\:/appTablet/app/src/main/res/layout/fragment_dialog.xml" value="0.16336633663366337" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

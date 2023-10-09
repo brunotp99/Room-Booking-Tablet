@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#3EA76A</color>
+
+    <color name="azul_300">#5abaff</color>
+    <color name="azul_400">#2da9ff</color>
+    <color name="azul_500">#0099ff</color>
+    <color name="azul_600">#1a8aff</color>
+    <color name="azul_700">#2776ff</color>
+    <color name="azul_800">#2d63ed</color>
+    <color name="azul_900">#3340cd</color>
+    <color name="azul_switch">#9CB5F7</color>
+    <color name="textbox_cinza">#CDCDCD</color>
+    <color name="deletecolor">#FD3324</color>
+    <color name="black_smooth">#121212</color>
+    <!-- SnackBar -->
+    <color name="default_bg">#E23340CD</color>
+    <color name="danger_bg">#F2F44336</color>
+    <color name="alert_bg">#F3FF7B07</color>
+
+</resources>

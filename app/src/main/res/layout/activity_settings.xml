@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/paginaSettings"
+    android:keepScreenOn="true"
+    tools:context=".Settings">
+
+    <LinearLayout
+        android:id="@+id/linearAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/gradient_top"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnArrow"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:paddingLeft="30dp"
+            android:src="@drawable/ic_arrow_left" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="30dp"
+            android:src="@drawable/softinsa" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:paddingRight="40dp">
+
+            <TextView
+                android:id="@+id/textViewSala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Sala Mundo"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewLugares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="12 Lugares"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSala" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <!-- Design Interno -->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linearAppBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:tabMode="fixed">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gerir Dispositivo"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gerir Sala"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- Editar Dispositivo -->
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/containerDispositivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Editar Dispositivo"
+            android:textColor="@color/black_smooth"
+            android:textSize="50sp" />
+
+        <LinearLayout
+            android:id="@+id/linearFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleRegistro">
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Estabelecimento" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/defineEstDrop"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtitleRegistro">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Selecionar estabelecimento..."
+                        android:inputType="none"
+                        android:textColorHint="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Sala a associar" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/defineSalaDrop"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtitleRegistro">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteSalas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:hint="Escolher sala..."
+                        android:inputType="none"
+                        android:textColorHint="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linha2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearFirst">
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Marca *" />
+
+                <EditText
+                    android:id="@+id/defineMarca"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Samsung"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Modelo *" />
+
+                <EditText
+                    android:id="@+id/defineModelo"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Tab 7"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linha3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearFirst">
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Código PIN *" />
+
+<!--                <EditText
+                    android:id="@+id/definePin"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Código PIN 4 Dígitos"
+                    android:maxLines="1"
+                    android:maxLength="4"
+                    android:inputType="numberPassword"
+                    android:padding="15dp" />-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/definePin"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:endIconMode="password_toggle"
+                    android:maxLines="1"
+                    android:maxLength="4"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pinText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberPassword"
+                        android:text="1234"
+                        android:background="@drawable/custom_input"
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="360dp"
+                    android:padding="15dp"
+                    android:layout_height="60dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_margin="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnGuardarDispositivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppins"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/modern_button"
+                    app:backgroundTint="@color/azul_800"
+                    android:text="Guardar" />
+
+                <Button
+                    android:id="@+id/btnApagar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppins"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/modern_button"
+                    app:backgroundTint="@color/danger_bg"
+                    android:text="Apagar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Editar Sala -->
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/containerSala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/titleSala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="20dp"
+                android:text="Editar Sala"
+                android:textColor="@color/black_smooth"
+                android:textSize="50sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:useMaterialThemeColors="false"
+                        android:id="@+id/estadoSala" />
+
+                    <TextView
+                        android:id="@+id/txtEstadoSala"
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="Bloqueada"
+                        android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstSala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/titleRegistro">
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Sala *" />
+
+                <EditText
+                    android:id="@+id/defineSala"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Sala Mundo"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Lugares *" />
+
+                <EditText
+                    android:id="@+id/defineLugares"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/poppins"
+                    android:hint="15 Lugares"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linhaSala2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearFirst">
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingRight="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Alocação" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderAlocacao"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Alocação"
+                            android:value="20.0"
+                            android:valueFrom="0.0"
+                            android:stepSize="1.0"
+                            android:valueTo="100.0" />
+
+                        <TextView
+                            android:id="@+id/txtAlocacao"
+                            android:layout_width="50dp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:fontFamily="@font/poppins"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="385dp"
+                android:paddingLeft="20dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Intervalo Limpeza" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderIntervalo"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Alocação"
+                        android:value="20.0"
+                        android:valueFrom="0.0"
+                        android:stepSize="1.0"
+                        android:valueTo="100.0" />
+
+                    <TextView
+                        android:id="@+id/txtIntervalo"
+                        android:layout_width="55dp"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:text="100 min"
+                        android:fontFamily="@font/poppins"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linhaSala3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearFirst">
+
+            <LinearLayout
+                android:layout_width="770dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Descrição" />
+
+                <EditText
+                    android:id="@+id/defineDescricao"
+                    android:layout_width="770dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Segundo andar..."
+                    android:maxLines="1"
+                    android:maxLength="200"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_margin="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGuardarSala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/modern_button"
+                app:backgroundTint="@color/azul_800"
+                android:text="Guardar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

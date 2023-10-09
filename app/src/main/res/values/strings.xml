@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Softinsa Salas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_calendar">Cálendario</string>
+    <string name="horario_abertura">09:00</string>
+    <string name="horario_fecho">20:00</string>
+    <string name="nao_reservavel_tempo">A reserva rapida esta <b>indisponível</b> pois há uma reunião agendada em <b>menos de 15 minutos.</b></string>
+    <string name="nao_reseravel_estabelecimento">"A reserva rápida esta <b>indisponível</b>, pois <b>ainda não é possível</b> efetuar reservas no estabelecimento."</string>
+
+    <string name="erro_intervalo_invalido">Porfavor, selecione um intervalo válido!</string>
+    <string name="erro_dia_vazio">Porfavor, selecione um dia da semana!</string>
+    <string name="erro_hora_inicio">\"Desculpe, não é póssivel agendar reunioes antes das \"</string>
+    <string name="erro_hora_fim">\"Desculpe, não é póssivel agendar reuniões depois das \"</string>
+    <string name="erro_gerar_qrcode">Desculpe, não foi póssivel gerar o qrcode.</string>
+    <string name="erro_geral">Desculpe, não foi póssivel processar o seu pedido!</string>
+    <string name="sucesso_atualizar">Os dados foram atualizados com sucesso!</string>
+    <string name="erro_atualizar_reservas">Desculpe, não foi póssivel atualizar a lista de reservas!</string>
+    <string name="erro_criar_dispositivo">Desculpe, não foi póssivel associar a sala ao dispositivo!</string>
+    <string name="erro_campos_vazios">Desculpe, não pode deixar campos assinalados (*) vazios!</string>
+    <string name="sucesso_atualizar_dispositivo">O dispositivo foi atualizado com sucesso!</string>
+    <string name="erro_atualizar_dispositivo">Desculpe, não foi póssivel atualizar o dispositivo!</string>
+    <string name="sucesso_atualizar_sala">As informaçoes da sala foram atualizados com sucesso!</string>
+    <string name="erro_atualizar_sala">Desculpe, não foi póssivel atualizar as informações da sala!</string>
+    <string name="sucesso_atualizar_estado">O estado da sala foi atualizado com sucesso!</string>
+    <string name="erro_atualizar_estado">Desculpe, não foi póssivel atualizar o estado da sala!</string>
+    <string name="desativacao_sala">Pedimos desculpa, resolveremos o problema o mais rápido póssivel</string>
+</resources>
